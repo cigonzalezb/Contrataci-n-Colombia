@@ -13,6 +13,12 @@ The second idea suggests that public entities operating at different levels have
 We explore these two ideas using an open data portal for public procurement available from the Colombian government. The Electronic System for Public Procurement (SECOP) is an online registry of all the contracts celebrated between public entities and private companies in Colombia. The system was initally implemented in 2011 looking to improve transparency and efficiency in public hiring procedures all over the country. : *Camilo!*
 
 > Camilo: quedarían tres cosas por hacer:
+
 [] completar un poco la idea detrás del SECOP
 [] Revisar que las dos ideas de verdad sean problemas que existan en la literatura de public management (Lo son según lo que yo encontré, pero usted es el experto)
 [] Revisar el documento completo antes de mandarlo
+
+
+http://ippa.org/jopp/download/vol1/Thai.pdf
+https://www.emeraldinsight.com/doi/pdfplus/10.1108/JOPP-06-01-02-2006-B001
+https://www.colombiacompra.gov.co/node/22829
