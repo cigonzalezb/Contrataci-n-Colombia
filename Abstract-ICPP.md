@@ -10,7 +10,7 @@ The first idea suggests that with more information, public entities look to hire
 
 The second idea suggests that public entities operating at different levels have different behaviours in their public tenders. The main driver here is the different levels of administrative capacity public organizations have to produce more complex, complete and elaborate tenders. However, smaller offices with the potential to get assistance from bigger government offices might have a different behaviour than the ones that do not. 
 
-We explore these two ideas using an open data portal for public procurement available from the Colombian government. The Electronic System for Public Procurement (SECOP) is an online platform that provides to services. First, it is the place where hiring transactions occur. Second it is a  registry where  of all the contracts celebrated between public entities and private companies in Colombia lie. The system was initially  implemented in 2011 looking to improve transparency and efficiency in public hiring procedures all over the country.  : *Camilo!*
+We explore these two ideas using an open data portal for public procurement available from the Colombian government. The Electronic System for Public Procurement (SECOP) is an online platform that provides to services. First, it is the place where hiring transactions occur. Second it is a registry where of all the contracts between public entities and private companies in Colombia are recorded. The system was initially  implemented in 2011 looking to improve transparency and efficiency in public hiring procedures all over the country.  : *Camilo!*
 
 > Camilo: quedarían tres cosas por hacer:
 
