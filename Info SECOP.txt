@@ -1,0 +1,232 @@
+Listado de variables disponibles en el SECOPI:
+
+"UID"
+"Anno Cargue SECOP"
+"Anno Firma del Contrato"
+"Nivel Entidad"
+"Orden Entidad"
+"Nombre de la Entidad"
+"NIT de la Entidad"
+"Código de la Entidad"
+"ID Tipo de Proceso"
+"Tipo de Proceso"
+"Estado del Proceso"
+"Causal de Otras Formas de Contratacion Directa"
+"ID Regimen de Contratacion"
+"Regimen de Contratacion"
+"ID Objeto a Contratar"
+"Objeto a Contratar"
+"Detalle del Objeto a Contratar"
+"Tipo de Contrato"
+"Municipio Obtencion"
+"Municipio Entrega"
+"Municipios Ejecucion"
+"Fecha de Cargue en el SECOP"
+"Numero de Constancia"
+"Numero de Proceso"
+"Numero del Contrato"
+"Cuantia Proceso"
+"ID Grupo"
+"Nombre Grupo"
+"ID Familia"
+"Nombre Familia"
+"ID Clase"
+"Nombre Clase"
+"ID Ajudicacion"
+"Tipo Identifi del Contratista"
+"Identificacion del Contratista"
+"Nom Raz Social Contratista"
+"Dpto y Muni Contratista"
+"Tipo Doc Representante Legal"
+"Identific del Represen Legal"
+"Nombre del Represen Legal"
+"Fecha de Firma del Contrato"
+"Fecha Ini Ejec Contrato"
+"Plazo de Ejec del Contrato"
+"Rango de Ejec del Contrato"
+"Tiempo Adiciones en Dias"
+"Tiempo Adiciones en Meses"
+"Fecha Fin Ejec Contrato"
+"Compromiso Presupuestal"
+"Cuantia Contrato"
+"Valor Total de Adiciones"
+"Valor Contrato con Adiciones"
+"Objeto del Contrato a la Firma"
+"ID Origen de los Recursos"
+"Origen de los Recursos"
+"Codigo BPIN"
+"Proponentes Seleccionados"
+"Calificacion Definitiva"
+"ID Sub Unidad Ejecutora"
+"Nombre Sub Unidad Ejecutora"
+"Moneda"                       
+"EsPostConflicto"
+"Ruta Proceso en SECOP I"
+
+
+Tipo de contrato:
+
+[X] "Prestación de Servicios" 
+[] "Otro Tipo de Contrato"   
+[X] "Suministro"              
+[] "Obra"                    
+[] "Compraventa"            
+[] "Arrendamiento"           
+[] "Consultoría"             
+[] "Crédito"                 
+[] "Comodato"                
+[] "Interventoría"
+[] "Concesión"
+[] "Fiducia"
+[] "Acuerdo Marco"
+[] "No definido"
+[] "Agregación de Demanda"  
+
+Tipo de proceso:
+
+[X] "Contratación Directa (Ley 1150 de 2007)"                                              
+[] "Régimen Especial"                                                                     
+[X] "Contratación Mínima Cuantía"                                                          
+[] "Licitación Pública"                                                                   
+[] "Selección Abreviada de Menor Cuantía (Ley 1150 de 2007)"                              
+[] "Subasta"                                                                              
+[] "Concurso de Méritos Abierto"                                                          
+[] "Licitación obra pública"                                                              
+[] "Contratos y convenios con más de dos partes"                                          
+[] "Selección Abreviada servicios de Salud"                                               
+[] "Selección Abreviada del literal h del numeral 2 del artículo 2 de la Ley 1150 de 2007"
+[] "Asociación Público Privada"                                                           
+[] "Concurso de Méritos con Lista Corta"                                                  
+[] "Iniciativa Privada sin recursos públicos"                                             
+[] "Concurso de Méritos con Lista Multiusos"                                              
+[] "Lista Multiusos" 
+
+Estado del proceso:
+
+[X] "Celebrado"
+[] "Terminado sin Liquidar"
+[] "Liquidado"
+[] "Convocado"
+[] "Terminado Anormalmente después de Convocado"
+[] "Adjudicado"
+[] "Descartado"
+[] "Borrador"
+[] "Expresión de Interés"
+[] "Lista Corta"
+[] "Publicación para manifestaciones de interés"
+[] "Finalizado el plazo para manifestaciones de interés"
+[] "Lista Multiusos" 
+
+Regimen de contratacion
+
+[] "Estatuto General de Contratación"
+[] "Régimen Especial"
+[] "Ley 80 de 1993"
+[] ""    
+
+
+Origen de los recursos
+
+[] "No definido"
+[] "Recursos propios"
+[] "Presupuesto Nacional/Territorial"
+[] "SGP"
+[] "SGR"
+[] "Regalías"
+[] "Recursos de crédito"
+
+
+
+Objeto a contratar
+
+----------------------------------------------
+"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento"
+"Servicios de Gestion, Servicios Profesionales de Empresa y Servicios Administrativos"
+"Servicios Medioambientales"
+"Servicios de Salud"
+"Servicios de Transporte, Almacenaje y Correo"
+"Organizaciones y Clubes"
+"Servicios Públicos y Servicios Relacionados con el Sector Público"
+"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento"
+"Servicios Personales y Domésticos"
+"Servicios Educativos y de Formación"
+"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes"
+"Servicios Políticos y de Asuntos Cívicos"
+"Servicios Basados en Ingeniería, Investigación y Tecnología"
+"Servicios de Contratacion Agrícola, Pesquera, Forestal y de Fauna"
+"Servicios Financieros y de Seguros"
+"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia"
+"Servicios de Producción Industrial y Manufactura"
+"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos"
+"Difusión de Tecnologías de Información y Telecomunicaciones"
+"Servicios de Minería, Petróleo y Gas"
+
+----------------------------------------------
+
+"Equipo Médico, Accesorios y Suministros"
+"Alimentos, Bebidas y Tabaco"
+"Equipos y Suministros para Limpieza"
+"Componentes y Suministros de Manufactura"
+"Ropa, Maletas y Productos de Aseo Personal"
+"Terrenos, Edificios, Estructuras y Vías"
+"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles"
+"Materiales y Productos de Papel"
+"Material Mineral, Textil y  Vegetal y Animal No Comestible"
+"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos"
+"Instrumentos Musicales, Juegos, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros"
+"Publicaciones Impresas, Publicaciones Electronicas y Accesorios"
+"Equipos de Oficina, Accesorios y Suministros"
+"Medicamentos y Productos Farmacéuticos"
+"Componentes y Suministros Electrónicos"
+"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas"
+"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes"
+"Muebles, Mobiliario y Decoración"
+"Material Químico incluyendo Bioquímicos y Materiales de Gas"
+"Equipos y Suministros para Impresión, Fotografia y Audiovisuales"
+"Artículos Domésticos, Suministros y Productos Electrónicos de Consumo"
+"Maquinaria y Accesorios para Construcción y Edificación"
+"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación"
+"Herramientas y Maquinaria General"
+"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad"
+"Componentes y Equipos para Distribución y Sistemas de Acondicionamiento"
+"Equipos, Suministros y Accesorios para Deportes y Recreación"
+"Maquinaria, Equipo y Suministros para la Industria de Servicios"
+"Material Vivo Vegetal y Animal, Accesorios y Suministros"
+"Maquinaria y Accesorios para Agricultura, Pesca, Silvicultura y Fauna"
+"Maquinaria, Accesorios y Suministros para Manejo, Acondicionamiento y Almacenamiento de Materiales"
+"Maquinaria y Accesorios de Minería y Perforación de Pozos"
+"Maquinaria y Accesorios para Manufactura y Procesamiento Industrial"
+"Maquinaria y Accesorios para Generación y Distribución de Energía"
+"Materiales de Resina, Colofonia, Caucho, Espuma, Película y Elastómericos"
+"Productos para Relojería, Joyería y Piedras Preciosas"
+
+
+Cuantia contrato
+
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+0.000e+00 2.195e+06 7.700e+06 1.573e+08 1.926e+07 2.572e+14 
+
+Nivel de las entidades X Orden de las entidades
+
+   `Nivel Entidad` `Orden Entidad`                                 n
+   <chr>           <chr>                                       <int>
+ 1 NACIONAL        NACIONAL CENTRALIZADO                      672824
+ 2 NACIONAL        NACIONAL DESCENTRALIZADO                   735013
+ 3 NACIONAL        TERRITORIAL DEPARTAMENTAL CENTRALIZADO      16145
+ 4 NACIONAL        TERRITORIAL DEPARTAMENTAL DESCENTRALIZADO   21100
+ 5 NACIONAL        TERRITORIAL DISTRITAL MUNICIPAL NIVEL 1      5051
+ 6 NACIONAL        TERRITORIAL DISTRITAL MUNICIPAL NIVEL 2       116
+ 7 No Definida     No Definido                                  8877
+ 8 TERRITORIAL     DISTRITO CAPITAL                           402307
+ 9 TERRITORIAL     NACIONAL CENTRALIZADO                        6714
+10 TERRITORIAL     NACIONAL DESCENTRALIZADO                   101254
+11 TERRITORIAL     No Definido                                     7
+12 TERRITORIAL     TERRITORIAL DEPARTAMENTAL CENTRALIZADO     424345
+13 TERRITORIAL     TERRITORIAL DEPARTAMENTAL DESCENTRALIZADO 1516607
+14 TERRITORIAL     TERRITORIAL DISTRITAL MUNICIPAL NIVEL 1    398027
+15 TERRITORIAL     TERRITORIAL DISTRITAL MUNICIPAL NIVEL 2    645057
+16 TERRITORIAL     TERRITORIAL DISTRITAL MUNICIPAL NIVEL 3     83053
+17 TERRITORIAL     TERRITORIAL DISTRITAL MUNICIPAL NIVEL 4    175543
+18 TERRITORIAL     TERRITORIAL DISTRITAL MUNICIPAL NIVEL 5    178688
+19 TERRITORIAL     TERRITORIAL DISTRITAL MUNICIPAL NIVEL 6   1263002
+

@@ -1,0 +1,6 @@
+
+- Rango contrato: N. Parece que son los contratos que no tienen fecha de finalización de contrato, pero porqué?
+- Porque hay proyectos que tienen la misma fecha de inicio y de fin de ejecucion del contrato
+- Diferencian entre 'Nombre Familia', 'Objeto a contratar', y 'Nombre Clase'
+ 
+ 
