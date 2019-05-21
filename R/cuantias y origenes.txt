@@ -1,0 +1,34 @@
+Origen de los Recursos/grupocuantia/n
+No definido/1. 1' - 10'/457
+No definido/2. 10' - 50'/955
+No definido/3. 50' - 100'/608
+No definido/4. 100' - 500'/1283
+No definido/5. 500' - 1000'/398
+No definido/6. +1000'/490
+No definido/NA/916
+"Presupuesto Nacional/Territorial"/1. 1' - 10'/1
+"Presupuesto Nacional/Territorial"/2. 10' - 50'/12
+"Presupuesto Nacional/Territorial"/3. 50' - 100'/14
+"Presupuesto Nacional/Territorial"/4. 100' - 500'/13
+"Presupuesto Nacional/Territorial"/5. 500' - 1000'/14
+"Presupuesto Nacional/Territorial"/6. +1000'/12
+Recursos de crédito/4. 100' - 500'/1
+Recursos de crédito/6. +1000'/1
+Recursos propios/1. 1' - 10'/10
+Recursos propios/2. 10' - 50'/37
+Recursos propios/3. 50' - 100'/36
+Recursos propios/4. 100' - 500'/139
+Recursos propios/5. 500' - 1000'/64
+Recursos propios/6. +1000'/86
+Recursos propios/NA/2
+Regalías/3. 50' - 100'/1
+Regalías/4. 100' - 500'/5
+Regalías/6. +1000'/4
+SGP/1. 1' - 10'/5
+SGP/2. 10' - 50'/76
+SGP/3. 50' - 100'/23
+SGP/4. 100' - 500'/4
+SGP/5. 500' - 1000'/7
+SGP/6. +1000'/19
+SGR/3. 50' - 100'/1
+SGR/6. +1000'/7

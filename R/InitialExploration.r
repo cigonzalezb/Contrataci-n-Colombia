@@ -1,3 +1,12 @@
+###### ------------------------------------------------------------ ###
+###### ------------------------------------------------------------ ###
+###### NAME: INitial Exploration
+###### DATE: April 2019
+###### Version: 1
+###### ------------------------------------------------------------ ###
+###### ------------------------------------------------------------ ###
+###### NOTES ######
+######
 
 if (!require("data.table")) install.packages("data.table")
 library(data.table)
@@ -11,10 +20,15 @@ library(tidyverse)
 if (!require("devtools")) install.packages("devtools")
 library(devtools)
 
-install_github("easyGgplot2", "kassambara")
+if(!require(easyGgplot2)) install_github("easyGgplot2")
+library("easyGgplot2")
+
+if(!require(kassambara)) install_github("kassambara")
+library("kassambara")
 
 if(!require(igraph)) install.packages("igraph",repos = "http://cran.us.r-project.org")
 library("igraph")
+
 
 
 rm(list = ls())
