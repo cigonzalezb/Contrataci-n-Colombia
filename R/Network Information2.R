@@ -2,11 +2,13 @@
 ###### ------------------------------------------------------------ ###
 ###### NAME: Creating a network measure
 ###### DATE: May 2019
-###### Version: 1
+###### Version: 2
 ###### ------------------------------------------------------------ ###
 ###### ------------------------------------------------------------ ###
 ###### NOTES ######
 ###### Coming from the Initial Exploration
+###### https://study.sagepub.com/borgatti2e/student-resources/chapter-5/chapter-13-analyzing-two-mode-data
+###### https://rpubs.com/pjmurphy/317838
 
 if (!require("data.table")) install.packages("data.table")
 library(data.table)
@@ -264,6 +266,11 @@ ggnet2(jaccardgra_small,
 ####################################################################################
 ####################################################################################
 
+rm(list = ls())
+gc()
+# Cargando entidades nivel nacional, orden centralizado
+load("../../SECOPespecial.RData")
+
 # Cargando Gobernaciones
 gobernaciones <- read.delim("nombres_secop_especial.txt", 
                                header = TRUE, sep = "/")
@@ -279,22 +286,65 @@ bienesyservicios <- read.delim("bienesyservicios.txt",
 bienesyservicios$`Objeto a Contratar` <- as.character(bienesyservicios$Nombre)
 bienesyservicios <- bienesyservicios[, c("Objeto a Contratar", "Grupo", "Sector")]
 
+# Cargando CALIFICACIONES DNP 
+dnp_departamentos <- read.delim("../Bases DNP/Calificacion departamental 2000-2017.txt", 
+                               header = TRUE, sep = "/", fileEncoding = "WINDOWS-1252")
 
+dnp_departamentos$`Nombre de la Entidad` <- as.character(dnp_departamentos$Nombre.de.la.Entidad)
+dnp_departamentos$`Indicador` <- as.numeric(dnp_departamentos$Indicador.fiscal)
+
+dnp_departamentos <- dnp_departamentos[, c("Año", "Nombre de la Entidad", "Indicador")]
+
+
+dnp_departamentos <- dnp_departamentos[dnp_departamentos$Año >= 2011, ]
+
+
+dnp_departamentos <- dnp_departamentos %>%
+  group_by(`Nombre de la Entidad`) %>%
+  summarize(ind_promedio = mean(Indicador))
+
+quant_indicador <- c(0,
+                     39, 
+                     60, 
+                     70, 
+                     80, 
+                     100)
+
+dnp_departamentos$calificacion <- cut(dnp_departamentos$ind_promedio, breaks = quant_indicador)
+
+levels(dnp_departamentos$calificacion) = c("1. Deterioro", 
+                                           "2. Riesgo",
+                                           "3. Vulnerable'",
+                                           "4. Sostenible",
+                                           "5. Solvente")
+dnp_departamentos$calificacion <- as.character(dnp_departamentos$calificacion)
+
+
+## MERGE
 gob <- merge(x = secopespecial, 
                  y = gobernaciones, 
                  by = "Nombre de la Entidad", 
-                 all.x =  TRUE)
+                 all =  TRUE)
 
 rm(secopespecial)
 gc()
 
-gob <- gob[gob$Gobernacion == "GOBERNACION"]
+
+gob <- gob[gob$Gobernacion == "GOBERNACION", ]
 
 
 gob <- merge(x = gob, 
                  y = bienesyservicios, 
                  by = "Objeto a Contratar", 
                  all.x =  TRUE)
+
+gob <- merge(x = gob, 
+             y = dnp_departamentos, 
+             by = "Nombre de la Entidad", 
+             all.x = TRUE)
+
+unique(sort(matrix(data = gob$`Nombre de la Entidad`, ncol = 1, nrow = 32)))
+
 
 
 # Agrupacion cuantias
@@ -367,10 +417,21 @@ jaccardmat_propios <- ifelse(jaccardmat_propios > jaccthresh, 1, 0)
 jaccardgra_propios <- network(jaccardmat_propios, 
                             directed = FALSE)
 
+pre_names <- data.frame("Nombre de la Entidad" = network::get.vertex.attribute(x = jaccardgra_propios, 
+                                           attrname = "vertex.names"))
+
+pre_names <- merge(x = pre_names, 
+                   y = dnp_departamentos, 
+                   by.x = "Nombre.de.la.Entidad", 
+                   by.y = "Nombre de la Entidad", all.x = TRUE)
+
+network::set.vertex.attribute(x = jaccardgra_propios, attrname = "Calificacion", value = pre_names$calificacion)
+
+
 
 ggnet2(jaccardgra_propios, 
        node.size = 6, 
-       node.color = "grey", 
+       node.color = "Calificacion", 
        edge.size = 0.5, 
        edge.color = "black", 
        label = TRUE, 
@@ -430,10 +491,19 @@ jaccardmatregalias <- ifelse(jaccardmatregalias > jaccthresh, 1, 0)
 jaccardgraregalias <- network(jaccardmatregalias, 
                               directed = FALSE)
 
+pre_names <- data.frame("Nombre de la Entidad" = network::get.vertex.attribute(x = jaccardgraregalias, 
+                                                                               attrname = "vertex.names"))
+
+pre_names <- merge(x = pre_names, 
+                   y = dnp_departamentos, 
+                   by.x = "Nombre.de.la.Entidad", 
+                   by.y = "Nombre de la Entidad", all.x = TRUE)
+
+network::set.vertex.attribute(x = jaccardgraregalias, attrname = "Calificacion", value = pre_names$calificacion)
 
 ggnet2(jaccardgraregalias, 
        node.size = 6, 
-       node.color = "grey", 
+       node.color = "Calificacion", 
        edge.size = 1, 
        edge.color = "black", 
        label = TRUE, 
@@ -493,10 +563,20 @@ jaccardmatpresupuesto <- ifelse(jaccardmatpresupuesto > jaccthresh, 1, 0)
 jaccardgrapresupuesto <- network(jaccardmatpresupuesto, 
                               directed = FALSE)
 
+pre_names <- data.frame("Nombre de la Entidad" = network::get.vertex.attribute(x = jaccardgrapresupuesto, 
+                                                                               attrname = "vertex.names"))
+
+pre_names <- merge(x = pre_names, 
+                   y = dnp_departamentos, 
+                   by.x = "Nombre.de.la.Entidad", 
+                   by.y = "Nombre de la Entidad", all.x = TRUE)
+
+network::set.vertex.attribute(x = jaccardgrapresupuesto, attrname = "Calificacion", value = pre_names$calificacion)
+
 
 ggnet2(jaccardgrapresupuesto, 
        node.size = 6, 
-       node.color = "grey", 
+       node.color = "Calificacion", 
        edge.size = 0.5, 
        edge.color = "black", 
        label = TRUE, 
